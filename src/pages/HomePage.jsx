@@ -1,6 +1,6 @@
 import React from 'react'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import Marq from '../components/marq';
+import Marq from '../components/Marq';
 
 const HomePage = () => {
   return (
