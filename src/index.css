@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+
+:root{
+  --primary-color: #2EB7E1;
+  --secondary-color: #064B65;
+  --ternary-color: #0C75EE;
+  --bg-color: #161616;
+  --bg-card: #191919;
+  --text-color: #FFFFFF;
+}
+
+@font-face {
+  font-family: 'Biglas';
+  src: url('./assets/biglas.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@layer base {
+  html{
+    @apply scroll-smooth;
+  }
+
+  body{
+    @apply bg-(--bg-color) text-(--text-color);
+    @apply font-[arial];
+    @apply overflow-x-hidden
+  }
+
+  button{
+     @apply px-4 py-2 rounded-3xl  font-semibold 
+  }
+
+  h1 { @apply text-5xl font-normal; }
+  h2 { @apply text-4xl; }
+  h3 { @apply text-3xl; }
+  h4 { @apply text-2xl; }
+  h5 { @apply text-xl; }
+  h6 { @apply text-sm; }
+
+  h1, h2, h3, h4,h5, h6 {
+    font-family: 'Biglas', Arial, sans-serif;
+  }
+}
+
+@layer components{
+  .btn-primary{
+        @apply bg-linear-to-r from-(--primary-color) to-(--secondary-color) text-white hover:opacity-90;
+  }
+
+ .btn-reverse{
+        @apply bg-linear-to-r from-(--secondary-color) to-(--primary-color) rounded-full text-white hover:opacity-90;
+  }
+
+  .btn-secondary{
+        @apply border-2 border-(--primary-color)/60 text-(--primary-color)/60  hover:opacity-90;
+  }
+  
+   .card-hover {
+    @apply transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#064B65];
+  }
+
+  .radial_bg {
+    position: absolute;
+    top: -50%;
+    background: radial-gradient(
+      ellipse at center,
+      var(--secondary-color) 0.5%,
+      var(--bg-color) 100%
+    );
+    filter: blur(80px);
+  }
+
+  .circle_gradient {
+    bottom: -50%;
+    background: radial-gradient(
+      circle at top,
+      var(--ternary-color),
+      transparent 60%
+    );
+  filter: drop-shadow(0 0 40px var(--ternary-color));
+
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee-scroll 12s linear infinite;
+    will-change: transform;
+  }
+
+  .marquee-group {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  @keyframes marquee-scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+}
