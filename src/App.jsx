@@ -4,13 +4,12 @@ import ProjectPage from "./pages/ProjectPage";
 import SkillsPage from "./pages/SkillsPage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
+import UpGradient from "./components/UpGradient";
 
 function App() {
   return (
     <>
-      <div>
-        <div className="fixed h-150 w-full radial_bg rounded-full z-0" />
-      </div>
+      <UpGradient />
       <NavBar />
       <HomePage />
       <ProjectPage />
