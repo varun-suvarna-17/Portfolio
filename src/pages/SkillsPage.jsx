@@ -9,7 +9,6 @@ import { FaPython } from "react-icons/fa";
 import { FaJava } from "react-icons/fa6";
 import { FaNodeJs } from "react-icons/fa";
 import { FaReact } from "react-icons/fa6";
-import { TbMarquee } from 'react-icons/tb';
 
 const Skills_1 = [
     {icon: <FaReact size={40} className='text-gray-200' />, name: "ReactJS"},
@@ -31,33 +30,34 @@ const Skills_3 = [
 
 const SkillsPage = () => {
     return(
-    <div id='skills' className='h-screen w-full relative'>
-        <div className='absolute'>
-            <div className=' w-200 h-140 m-8 mt-25 lg:ml-40 flex'>
-                <div className='flex flex-col gap-5 w-40 h-130'>
+    <div id='skills' className='min-h-screen w-full relative overflow-x-clip'>
+        <div className='absolute inset-x-0 flex justify-center item-center px-4 '>
+            <div className='w-full max-w-5xl h-140 mt-25 lg:mt-20 flex justify-left lg:-ml-40 gap-2 sm:gap-5 '>
+                <div className='flex flex-col gap-5 w-24 sm:w-30 md:w-40 h-130'>
                     {Skills_1.map((skill) => (
-                        <div className='flex flex-col gap-2 items-center  justify-center bg-(--bg-card) w-30 h-30  border-2 border-(--primary-color)/60 rounded-xl '>
+                        <div key={skill.name} className='flex flex-col gap-2 items-center justify-center bg-(--bg-card) w-22 h-22 sm:w-30 sm:h-30 border-2 border-(--primary-color)/60 rounded-xl'>
                             {skill.icon}
-                            <span className='text-gray-00'>{skill.name}</span>
+                            <span className='text-gray-00 text-sm '>{skill.name}</span>
                         </div>
                     ))}
                 </div>
-                <div className='flex flex-col gap-5 w-40 h-130 mt-20'>
+                <div className='flex flex-col gap-5 w-24 sm:w-30 md:w-40 h-130 mt-12 sm:mt-20'>
                     {Skills_2.map((skill) => (
-                        <div className='flex flex-col gap-2 items-center  justify-center bg-(--bg-card) w-30 h-30  border-2 border-(--primary-color)/60 rounded-xl  '>
+                        <div key={skill.name} className='flex flex-col gap-2 items-center justify-center bg-(--bg-card)  w-22 h-22 sm:w-30 sm:h-30 border-2 border-(--primary-color)/60 rounded-xl'>
                             {skill.icon}
-                            <span className='text-gray-00'>{skill.name}</span>
+                            <span className='text-gray-00 text-sm '>{skill.name}</span>
                         </div>
                     ))}
                 </div>
-                <div className='flex flex-col gap-5 w-40 h-100 mt-40'>
+                <div className='flex flex-col gap-5 w-24 sm:w-30 md:w-40 h-100 mt-24 sm:mt-40'>
                     {Skills_3.map((skill) => (
                         <div 
+                        key={skill.name}
                         className='flex flex-col gap-2 items-center justify-center 
-                        bg-(--bg-card) w-30 h-30  
+                        bg-(--bg-card)  w-22 h-22 sm:w-30 sm:h-30
                          border-2 border-(--primary-color)/60 rounded-xl '>
                             {skill.icon}
-                            <span className='text-gray-00'>{skill.name}</span>
+                            <span className='text-gray-00 text-sm '>{skill.name}</span>
                         </div>
                     ))}
                 </div>
@@ -65,7 +65,7 @@ const SkillsPage = () => {
         </div>
         <div className="relative h-screen overflow-hidden">
             <RiReactjsLine
-                className="absolute top-[-10%] right-[-15%] text-[900px] rotate-12 text-white/5"/>
+                className="absolute top-[-5%] right-[-35%] sm:right-[-20%] text-[640px] lg:text-[900px] rotate-12 text-white/5"/>
         </div>
    </div>
     );

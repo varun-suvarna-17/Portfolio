@@ -21,7 +21,7 @@ const NavBar = () => {
         <div className='font-bold text-xl ml-2'>
           <a href="#home">VARUN</a>
         </div>
-          <div className="hidden lg:flex gap-8 mr-5">
+          <div className="hidden lg:flex gap-10 mr-5">
             {navItems.map((item) => (
               <a
                 key={item}

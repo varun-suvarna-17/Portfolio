@@ -6,7 +6,7 @@ import React from 'react'
 const ProjectCard = ({content}) => {
   return (
    <div 
-   className='bg-(--bg-card) flex flex-col shrink-0 w-90 min-h-135 p-2 rounded-4xl shadow-lg shadow-#000000 card-hover' >
+   className='bg-(--bg-card) flex flex-col shrink-0 w-90 ml-4 min-h-135 p-2 rounded-4xl shadow-lg shadow-#000000 card-hover' >
         <div className='items-centerw-full  h-[60%] rounded-t-4xl rounded-b-2xl overflow-hidden'>
            <img 
            className='w-full h-full object-cover'

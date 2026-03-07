@@ -23,7 +23,7 @@ const ProjectPage = () => {
       <div className='text-center mt-30'>
        <h1>PROJECTS FROM THE <span className='text-(--primary-color)'>CODESPACE</span></h1>
       </div>
-      <div  ref={scrollRef} className='flex overflow-x-auto no-scrollbar py-10 px-6 gap-10 lg:justify-center mx-6'>
+      <div  ref={scrollRef} className='flex overflow-x-auto no-scrollbar py-10  gap-6 lg:justify-center '>
          {Projects.map((project) => (
           <ProjectCard key={project.id} content={project}/>
          ))}

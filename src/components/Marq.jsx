@@ -22,10 +22,10 @@ const Skills = [
 
 const Marq = () => {
   return (
-<div className="marq w-full h-20 bg-gray-700/50 overflow-hidden">
+<div className="w-full h-20 bg-gray-700/50 overflow-hidden">
     <div className='marquee-track h-full whitespace-nowrap'>
         {[0, 1].map((groupIndex) => (
-          <div key={groupIndex} className='marquee-group flex items-center gap-10 h-full shrink-0'>
+          <div key={groupIndex} className='marquee-group flex items-center gap-10 mx-3 h-full shrink-0'>
             {Skills.map((skill) => (
               <div key={`${groupIndex}-${skill.name}`} className='flex gap-2 items-center shrink-0'>
                   {skill.icon}

@@ -24,14 +24,14 @@ const HomePage = () => {
               className='w-80 h-85 rounded-xl card-hover'/>
           </div>
         </div>
-        <div className='md:-mt-15 w-full'>
+        <div className='md:-mt-15 w-full relative'>
             <div className='flex  justify-center mb-10 '>
               <div className='text-gray-300 text-sm border border-(--secondary-color) rounded-full px-3'>Hey there, Varun Here!</div>
             </div>
-            <div className='h-50 flex justify-center '>
-              <div className='w-100 circle_gradient  rounded-t-full'></div>
+            <div className='h-50 flex justify-center overflow-visible'>
+              <div className='w-[85vw] max-w-100 circle_gradient  rounded-t-full'></div>
             </div>
-            <div className='bottom-0 w-full'>
+            <div className='relative z-10 -mt-18'>
               <Marq />
             </div>
         </div>

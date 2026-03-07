@@ -10,7 +10,7 @@ const ContactPage = () => {
             <h1 className='text-center  pt-20'>
                 <span className='text-(--primary-color)'>LET’S</span> CONNECT
             </h1>
-            <div className='bg-[#1E1E1E] drop-shadow-black/50 drop-shadow-lg mx-5 min-w-100 md:w-130  h-125 rounded-4xl flex flex-col items-center'>
+            <div className='bg-[#1E1E1E] drop-shadow-black/50 drop-shadow-lg mx-4 w-[calc(100%-2rem)] max-w-[32.5rem] md:w-130 h-auto rounded-4xl flex flex-col items-center'>
                 <div className='w-55 h-55 bg-[#1E1E1E] drop-shadow-black/50 drop-shadow-lg  rounded-full -mt-25 flex items-center justify-center'>
                     <div className='w-50 h-50 overflow-hidden rounded-full'>
                        <img src="/photos/Varun.jpg" alt="me" className='object-cover' />
@@ -24,7 +24,7 @@ const ContactPage = () => {
                         I’m always open to conversations, collaborations, and new opportunities.
                     </h5>
                 </div>
-                <div className='w-full h-25  flex gap-5 justify-center'>
+                <div className='w-full h-25 py-20 -mt-10 flex overflow-x-auto no-scrollbar overflow-y-hidden pl-10 min-[450px]:pl-0 gap-5 justify-center items-center relative '>
                           {contacts.map((contact, index) => (
                             
                             <button 
@@ -36,7 +36,7 @@ const ContactPage = () => {
                            </button>
                           ))}
                 </div>
-                <button className='btn-primary my-5 flex gap-3 items-center card-hover hover:-translate-y-1'>
+                <button className='btn-primary my-5 flex gap-3 items-center card-hover hover:-translate-y-1 relative'>
                     Download CV
                     <FaDownload size={20} />
                 </button>
