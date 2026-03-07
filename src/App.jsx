@@ -5,6 +5,7 @@ import SkillsPage from "./pages/SkillsPage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import UpGradient from "./components/UpGradient";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <SkillsPage />
       <AboutPage />
       <ContactPage />
+      <Footer/>
     </>
   );
 }
